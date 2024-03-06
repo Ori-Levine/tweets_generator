@@ -1,10 +1,13 @@
+
+
+```markdown
 # Markov Chain - Generic Programming Project
 
 **Introduction**
-This C-based generic Markov chain project utilizes generic programming principles. The program employs a Markov chain to generate random sequences of words based on an input text corpus. The generated sequences can represent tweets or other data structures, showcasing the versatility of the implementation.
+This C-based generic Markov chain project is my solution for the 3rd exercise in the "C/C++ course" at the Hebrew University of Jerusalem. It utilizes generic programming principles. The program employs a Markov chain to generate random sequences of words based on an input text corpus.
 
 **Tweets Generator**
-The primary focus is on the tweets_generator aspect of the project. The program takes an input text corpus and utilizes a Markov chain to generate random sequences of words. Each sequence serves as a representation of a tweet. This implementation demonstrates the power of generic programming by allowing the generation of various types of sequences beyond tweets.
+The primary focus is on the tweets_generator aspect of the project. The program takes an input text corpus and utilizes a Markov chain to generate random sequences of words. Each sequence serves as a representation of a tweet or other data structures, highlighting the versatility of the implementation.
 
 ## Files
 
@@ -26,7 +29,7 @@ The primary focus is on the tweets_generator aspect of the project. The program 
    - Makefile for convenient project compilation and execution.
 
 6. **snakes_and_ladders.c**
-   - Test file showcasing the generic implementation of the markov chain with a different data type.
+   - Test file showcasing the generic implementation of the Markov chain with a different data type.
 
 ## Compilation and Execution
 
@@ -36,20 +39,19 @@ To compile and execute the tweets generator, use the following commands in the t
 
 ```bash
 make tweets
-./tweets_generator 123 2 "justdoit_tweets.txt"
+./tweets_generator 123 2 "justdoit_tweets.txt" [words_to_read]
 ```
 
-The `make tweets` command will generate a compiled file that can be run with the provided example command-line arguments (e.g., `123 2 "justdoit_tweets.txt"`). Feel free to modify the arguments based on your requirements.
+The `make tweets` command will generate a compiled file that can be run with the provided example command-line arguments (e.g., `123 2 "justdoit_tweets.txt"`).
 
-### Snakes and Ladders Test
+### Snakes and Ladders
 
-To compile and execute the snakes and ladders test, use the following commands:
+To compile and execute the snakes and ladders, use the following commands (make sure you are in the directory containing the source code files):
 
 ```bash
 make snake
-./ladders_and_snakes arg1 arg2 arg3
+./ladders_and_snakes 2 3
 ```
-
 
 - `<seed>`: Seed for the random number generator.
 - `<num_tweets>`: Number of tweets to generate.
@@ -64,13 +66,35 @@ make snake
 
 ## Functionality
 
-- Reads the text corpus file and builds a Markov chain database.
-- Generates random sequences of words based on the Markov chain.
-- Outputs the generated tweets to the console.
+### Tweets Generator
+The tweets generator program offers the following functionalities:
 
-## Notes
+1. **Text Corpus Processing:**
+   - Reads the specified text corpus file to extract information.
+   - Builds a Markov chain database based on the processed data.
 
-- The program may display error messages if there are issues with command-line arguments or file access.
-- Memory allocation failures are handled with appropriate error messages.
+2. **Tweet Generation:**
+   - Utilizes the Markov chain database to generate random sequences of words.
+   - Constructs coherent and contextually relevant tweet-like sequences.
 
-Feel free to explore and modify the source code to enhance the functionality or adapt it to your specific use case.
+3. **Output:**
+   - Displays the generated tweets on the console.
+
+### Snakes and Ladders Game
+The snakes and ladders program provides the following functionalities:
+
+1. **Game Setup:**
+   - Configures the game board with snakes and ladders.
+   - Defines game rules and outcomes for encounters with snakes and ladders.
+
+2. **Player Movement:**
+   - Simulates player movement on the board based on dice rolls.
+   - Handles interactions with snakes and ladders, updating player positions.
+
+3. **Game State Tracking:**
+   - Tracks the current game state, including player positions and special events.
+
+4. **Console Display:**
+   - Shows the progress of the game, including player positions and special events.
+```
+
