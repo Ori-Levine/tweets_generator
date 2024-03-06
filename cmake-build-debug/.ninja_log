@@ -1,0 +1,5 @@
+# ninja log v5
+1	270	6738252662155812	CMakeFiles/ex3b_ori_levine.dir/linked_list.c.obj	ef75c6a0d538bf24
+3	219	6738253368696302	ex3b_ori_levine.exe	c2f1830bc464560
+35	420	6738252663718443	CMakeFiles/ex3b_ori_levine.dir/tweets_generator.c.obj	891a4e8b7192aeef
+25	443	6738252663874550	CMakeFiles/ex3b_ori_levine.dir/markov_chain.c.obj	f5e6e42ce0b4ea08

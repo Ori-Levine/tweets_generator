@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/linked_list.h
+stdlib.h
+-
+
+/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/markov_chain.h
+linked_list.h
+/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/linked_list.h
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+
+/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/tweets_generator.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+linked_list.h
+/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/linked_list.h
+markov_chain.h
+/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/markov_chain.h
+

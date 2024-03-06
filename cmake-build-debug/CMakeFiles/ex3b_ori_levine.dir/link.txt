@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/ex3b_ori_levine.dir/linked_list.c.o CMakeFiles/ex3b_ori_levine.dir/tweets_generator.c.o CMakeFiles/ex3b_ori_levine.dir/markov_chain.c.o  -o ex3b_ori_levine 
