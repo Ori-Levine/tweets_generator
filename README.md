@@ -1,6 +1,3 @@
-
-
-```markdown
 # Markov Chain - Generic Programming Project
 
 **Introduction**
