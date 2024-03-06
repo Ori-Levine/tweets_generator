@@ -1,12 +1,15 @@
-# tweets_generator
+# Markov Chain - Generic Programming Project
 
-This is a simple text-based tweets generator implemented in C. The program uses a Markov chain to generate random sequences of words based on an input text corpus. Each generated sequence represents a tweet.
+**Introduction**
+This C-based generic Markov chain project utilizes generic programming principles. The program employs a Markov chain to generate random sequences of words based on an input text corpus. The generated sequences can represent tweets or other data structures, showcasing the versatility of the implementation.
+
+**Tweets Generator**
+The primary focus is on the tweets_generator aspect of the project. The program takes an input text corpus and utilizes a Markov chain to generate random sequences of words. Each sequence serves as a representation of a tweet. This implementation demonstrates the power of generic programming by allowing the generation of various types of sequences beyond tweets.
 
 ## Files
 
 1. **tweets_generator.c**
-   - The main program file that orchestrates the tweets generation.
-   - Implements the core logic, including processing input arguments, reading a text corpus, and utilizing a Markov chain to generate tweets.
+   - Implements the Markov chain to generate tweets.
 
 2. **linked_list.h / linked_list.c**
    - Header and source files for a basic linked list implementation.
@@ -19,22 +22,34 @@ This is a simple text-based tweets generator implemented in C. The program uses 
 4. **CMakeLists.txt**
    - The CMake configuration file to build the executable.
 
-## Building and Running
+5. **makefile**
+   - Makefile for convenient project compilation and execution.
 
-Ensure you have CMake installed and execute the following commands to build the project:
+6. **snakes_and_ladders.c**
+   - Test file showcasing the generic implementation of the markov chain with a different data type.
+
+## Compilation and Execution
+
+### Tweets Generator
+
+To compile and execute the tweets generator, use the following commands in the terminal (make sure you are in the directory containing the source code files):
 
 ```bash
-mkdir build
-cd build
-cmake ..
-make
+make tweets
+./tweets_generator 123 2 "justdoit_tweets.txt"
 ```
 
-Run the executable with the required command-line arguments:
+The `make tweets` command will generate a compiled file that can be run with the provided example command-line arguments (e.g., `123 2 "justdoit_tweets.txt"`). Feel free to modify the arguments based on your requirements.
+
+### Snakes and Ladders Test
+
+To compile and execute the snakes and ladders test, use the following commands:
 
 ```bash
-./ex3b_ori_levine <seed> <num_tweets> <text_corpus_file> [words_to_read]
+make snake
+./ladders_and_snakes arg1 arg2 arg3
 ```
+
 
 - `<seed>`: Seed for the random number generator.
 - `<num_tweets>`: Number of tweets to generate.
