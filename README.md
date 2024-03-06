@@ -93,5 +93,4 @@ The snakes and ladders program provides the following functionalities:
 
 4. **Console Display:**
    - Shows the progress of the game, including player positions and special events.
-```
 
