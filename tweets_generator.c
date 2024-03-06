@@ -83,82 +83,6 @@ static int comp_str (void *data1, void *data2)
   return strcmp (str1, str2);
 }
 
-//static int fill_database (FILE *fp, int words_to_read, struct MarkovChain
-//*markov_chain)
-///**
-// * Fill the markov_chain's database with the given words from the given file.
-// * @param fp pointer to the file
-// * @param words_to_read number of words to read from the file
-// * @param markov_chain pointer to the markov_chain
-// * @return 0 on success, 1 otherwise
-// */
-//{
-//  char tweet[TWEET_MAX_LEN];
-//  char *word = NULL;
-//  MarkovNode **last_word = malloc (sizeof (MarkovNode *));
-//  while ((fgets (tweet, TWEET_MAX_LEN, fp))
-//         && (words_to_read != 0))
-//  {
-//    words_to_read = process_tweet (words_to_read, markov_chain, tweet, word, last_word);
-//  }
-//  free(last_word);
-//  fclose (fp);
-//  return EXIT_SUCCESS;
-//}
-//static int
-//process_tweet (int words_to_read, struct MarkovChain *markov_chain, char *tweet, char *word, MarkovNode **last_word)
-//{
-//  word = strtok (tweet, WHITE_SPACE);
-//  while (word && words_to_read)
-//  {
-//    word[strcspn (word, END_LINE)] = 0;
-//    unsigned int len_word = strlen (word);
-//    char *tweet_copy = malloc (len_word + 1);
-//    strcpy (tweet_copy, word); // convert to "copy_str"
-//    Node *node = get_node_from_database (markov_chain, tweet_copy);
-//    if (node == NULL) // if markov_node not in markov_chain
-//    {
-//      node = add_to_database (markov_chain, tweet_copy);
-//      if (markov_chain->database->size == 1)
-//      {
-//        word = strtok (NULL, WHITE_SPACE);
-//        *last_word = node->data;
-//        words_to_read--;
-//        free(tweet_copy);
-//        continue;
-//      }
-//      if (!is_last_str ((*last_word)->data)) //word doesn't end with "."
-//      {
-//        add_node_to_counter_list (*last_word,
-//                                  node->data, markov_chain);
-//      }
-//    }
-//    else // if markov_node already in the markov_chain
-//    {
-//      node_in_chain (markov_chain, last_word, node);
-//    }
-//    word = strtok (NULL, WHITE_SPACE);
-//    *last_word = node->data;
-//    words_to_read--;
-//    free(tweet_copy);
-//  }
-//  return words_to_read;
-//}
-//static void
-//node_in_chain (struct MarkovChain *markov_chain, MarkovNode *const *last_word, Node *node)
-//{
-//  if (!is_last_str ((*last_word)->data)) //word
-//    // doesn't end with "."
-//  {
-//    add_node_to_counter_list
-//        (*last_word, node->data, markov_chain);
-//  }
-//}
-//
-
-////*****************
-
-
 static MarkovNode *process_word (char *word, struct MarkovChain *markov_chain,
                                  MarkovNode **last_word)
 /**
@@ -185,20 +109,10 @@ static MarkovNode *process_word (char *word, struct MarkovChain *markov_chain,
       return node->data;
     }
   }
-//    if (!is_last_str((*last_word)->data)) // word doesn't end with "."
-//      {
-//      add_node_to_counter_list(*last_word, node->data, markov_chain);
-//    }
-//  } else {
-//    if (!is_last_str((*last_word)->data)) {
-//      add_node_to_counter_list(*last_word, node->data, markov_chain);
-//    }
-//  }
   if (!is_last_str ((*last_word)->data)) // word doesn't end with "."
   {
     add_node_to_counter_list (*last_word, node->data, markov_chain);
   }
-
   free (tweet_copy);
   return node->data;
 }
@@ -207,7 +121,8 @@ static void
 process_tweet (char *tweet, int *words_to_read,
                struct MarkovChain *markov_chain, MarkovNode **last_word)
 /**
- * Process the given tweet and add it to the database.
+ * The function reads 'words_to_read' words from the tweet and adds them to
+ * the database and updates the last word that was processed.
  * @param tweet - the tweet to process and add to the database
  * @param words_to_read - the number of words to read from the tweet
  * @param markov_chain - the markov_chain to add the tweet to
@@ -225,6 +140,14 @@ process_tweet (char *tweet, int *words_to_read,
 
 static int
 fill_database (FILE *fp, int words_to_read, struct MarkovChain *markov_chain)
+/**
+ * Fill the markov_chain's database with the given words from the given file.
+ * @param fp pointer to the file
+ * @param words_to_read number of words to read from the file. If
+ * words_to_read is -1, the function will read the entire file.
+ * @param markov_chain pointer to the markov_chain
+ * @return EXIT_SUCCESS on success, EXIT_FAILURE otherwise
+ */
 {
   char tweet[TWEET_MAX_LEN];
   MarkovNode **last_word = malloc (sizeof (MarkovNode *));
@@ -238,9 +161,14 @@ fill_database (FILE *fp, int words_to_read, struct MarkovChain *markov_chain)
   fclose (fp);
   return EXIT_SUCCESS;
 }
-////*************************
 
 static int check_valid_args (int args)
+/**
+ * Check if the number of arguments is valid.
+ * @param args the number of arguments
+ * @return EXIT_SUCCESS if the number of arguments is valid, EXIT_FAILURE
+ * otherwise
+ */
 {
   if (args < MIN_ARGS_NUM || args > MAX_ARGS_NUM)
   {
@@ -251,6 +179,11 @@ static int check_valid_args (int args)
 }
 
 static int check_file (char *const *argv)
+/**
+ * Check if the given file is valid.
+ * @param argv the arguments
+ * @return EXIT_SUCCESS if the file is valid, EXIT_FAILURE otherwise
+ */
 {
   FILE *input = NULL;
   input = fopen (argv[TEXT_CORPUS_IND], "r");
@@ -264,6 +197,10 @@ static int check_file (char *const *argv)
 }
 
 static MarkovChain *initiate_markov_chain ()
+/**
+ * Allocate memory for a new markov_chain.
+ * @return a pointer to the new markov_chain
+ */
 {
   MarkovChain *markov_chain = malloc (sizeof (MarkovChain));
   if (markov_chain == NULL)
@@ -275,6 +212,11 @@ static MarkovChain *initiate_markov_chain ()
 }
 
 static MarkovChain *initiate_linked_list (MarkovChain **markov_chain)
+/**
+ * Allocate memory for a new linked_list and initiate the markov_chain.
+ * @param markov_chain a pointer to the markov_chain
+ * @return a pointer to the new markov_chain
+ */
 {
   LinkedList *list = malloc (sizeof (LinkedList));
   if (list == NULL)
@@ -321,11 +263,9 @@ int main (int args, char **argv)
   while (tweet_counter <= max_tweets)
   {
     printf ("Tweet %d:", tweet_counter);
-    generate_random_sequence
-        (markov_chain, NULL, MAX_WORDS_IN_TWEET);
+    generate_random_sequence (markov_chain, NULL, MAX_WORDS_IN_TWEET);
     tweet_counter++;
   }
   free_markov_chain (&markov_chain);
   return EXIT_SUCCESS;
 }
-

@@ -8,10 +8,12 @@
 
 #define ALLOCATION_ERROR_MASSAGE \
 "Allocation failure: Failed to allocate new memory\n"
+#define EMPTY_LIST 0
 
 
 /***************************/
 /*   insert typedefs here  */
+#define NEW_LINE "\n"
 /***************************/
 
 typedef void (*print_f) (void *);

@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/. 
+C_INCLUDES = -I/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/. 
 

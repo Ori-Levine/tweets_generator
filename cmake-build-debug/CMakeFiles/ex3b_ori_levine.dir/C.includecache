@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/linked_list.h
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/linked_list.h
 stdlib.h
 -
 
-/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/markov_chain.h
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/markov_chain.c
+stdlib.h
+-
+markov_chain.h
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/markov_chain.h
+string.h
+-
+
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/markov_chain.h
 linked_list.h
-/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/linked_list.h
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/linked_list.h
 stdio.h
 -
 stdlib.h
@@ -20,7 +28,7 @@ stdlib.h
 stdbool.h
 -
 
-/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/tweets_generator.c
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/tweets_generator.c
 stdlib.h
 -
 stdio.h
@@ -28,7 +36,7 @@ stdio.h
 string.h
 -
 linked_list.h
-/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/linked_list.h
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/linked_list.h
 markov_chain.h
-/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/markov_chain.h
+/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/markov_chain.h
 

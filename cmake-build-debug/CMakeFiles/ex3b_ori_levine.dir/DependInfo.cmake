@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/linked_list.c" "/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/cmake-build-debug/CMakeFiles/ex3b_ori_levine.dir/linked_list.c.o"
-  "/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/markov_chain.c" "/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/cmake-build-debug/CMakeFiles/ex3b_ori_levine.dir/markov_chain.c.o"
-  "/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/tweets_generator.c" "/mnt/c/Users/Lenovo/studies/year_1/semester_B/c_cpp/ex3b-ori.levine/cmake-build-debug/CMakeFiles/ex3b_ori_levine.dir/tweets_generator.c.o"
+  "/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/linked_list.c" "/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/cmake-build-debug/CMakeFiles/ex3b_ori_levine.dir/linked_list.c.o"
+  "/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/markov_chain.c" "/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/cmake-build-debug/CMakeFiles/ex3b_ori_levine.dir/markov_chain.c.o"
+  "/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/tweets_generator.c" "/mnt/c/Users/Lenovo/Desktop/GitHub/tweets_generator/cmake-build-debug/CMakeFiles/ex3b_ori_levine.dir/tweets_generator.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
